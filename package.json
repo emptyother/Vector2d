@@ -1,0 +1,24 @@
+{
+	"name": "vector2d",
+	"version": "1.0.0",
+	"description": "",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"build": "tsc"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/emptyother/Vector2d.git"
+	},
+	"keywords": [],
+	"author": "Tom A. Vibeto <tom@onlyhuman.dk> (https://onlyhuman.dk/)",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/emptyother/Vector2d/issues"
+	},
+	"homepage": "https://github.com/emptyother/Vector2d#readme",
+	"devDependencies": {
+		"typescript": "^3.4.3"
+	}
+}
