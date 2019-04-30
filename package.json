@@ -5,7 +5,8 @@
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"scripts": {
-		"build": "tsc"
+		"build": "tsc",
+		"build:docs": "typedoc --mode modules --out docs src"
 	},
 	"repository": {
 		"type": "git",
@@ -19,6 +20,10 @@
 	},
 	"homepage": "https://github.com/emptyother/Vector2d#readme",
 	"devDependencies": {
+		"typedoc": "^0.14.2",
 		"typescript": "^3.4.3"
-	}
+	},
+	"files": [
+		"dist/**/*"
+	]
 }
