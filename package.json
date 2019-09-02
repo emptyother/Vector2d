@@ -20,8 +20,8 @@
 	},
 	"homepage": "https://github.com/emptyother/Vector2d#readme",
 	"devDependencies": {
-		"typedoc": "^0.14.2",
-		"typescript": "^3.4.3"
+		"typedoc": "^0.15.0",
+		"typescript": "^3.6.2"
 	},
 	"files": [
 		"dist/**/*"
