@@ -1,7 +1,7 @@
 {
 	"name": "@emptyother/vector2d",
 	"version": "1.0.0",
-	"description": "",
+	"description": "A 2-dimentional object with methods for vector2d math.",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"scripts": {
