@@ -1,6 +1,7 @@
 {
 	"files.exclude": {
 		"dist": true,
-		"package.lock.json": true
+		"package.lock.json": true,
+		"coverage": true
 	}
 }
