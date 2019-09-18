@@ -1,5 +1,5 @@
 {
-	"name": "vector2d",
+	"name": "@emptyother/vector2d",
 	"version": "1.0.0",
 	"description": "",
 	"main": "dist/index.js",
@@ -10,7 +10,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/emptyother/Vector2d.git"
+		"url": "https://github.com/emptyother/Vector2d.git"
 	},
 	"keywords": [],
 	"author": "Tom A. Vibeto <tom@onlyhuman.dk> (https://onlyhuman.dk/)",
