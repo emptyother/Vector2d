@@ -1,3 +1,14 @@
 {
-	
+	"$schema": "http://json.schemastore.org/typedoc",
+	"out": "docs/",
+	"mode": "file",
+	"readme": "readme.md",
+	"includes": "src/",
+	"theme": "Minimal",
+	"hideGenerator": true,
+	"name": "Vector2d",
+	"excludeExternals": true,
+	"excludeNotExported": true,
+	"excludePrivate": true,
+	"excludeProtected": true
 }
