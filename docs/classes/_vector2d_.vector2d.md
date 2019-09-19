@@ -1,7 +1,6 @@
 
 # Class: Vector2d
 
-
 A 2-dimentional vector object
 
 ## Hierarchy
