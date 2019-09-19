@@ -9,7 +9,8 @@
 		"build:docs": "rimraf docs && typedoc",
 		"postbuild": "npm run-script build:docs",
 		"test": "mocha",
-		"test:coverage": "nyc --reporter=text mocha"
+		"test:coverage": "nyc --reporter=text mocha",
+		"prepublishOnly": "npm run-script build"
 	},
 	"repository": {
 		"type": "git",
