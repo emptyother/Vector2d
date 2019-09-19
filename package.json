@@ -1,6 +1,6 @@
 {
 	"name": "@emptyother/vector2d",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A 2-dimentional object with methods for vector2d math.",
 	"main": "dist/vector2d.js",
 	"types": "dist/vector2d.d.ts",
@@ -45,6 +45,7 @@
 		"typescript": "^3.6.3"
 	},
 	"files": [
-		"dist/vector2d.js"
+		"dist/vector2d.js",
+		"dist/vector2d.d.ts"
 	]
 }
