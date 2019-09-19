@@ -1,7 +1,7 @@
 {
 	"$schema": "http://json.schemastore.org/typedoc",
 	"out": "docs/",
-	"mode": "file",
+	"mode": "modules",
 	"readme": "readme.md",
 	"includes": "src/",
 	"hideGenerator": true,

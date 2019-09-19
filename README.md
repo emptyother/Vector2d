@@ -4,7 +4,7 @@ A 2D vector class with vector calculation methods.
 
 [Documentation][docs]
 
-[docs]: /docs/classes/vector2d.md
+[docs]: /docs/classes/_vector2d_.vector2d.md
 
 ## Quick Start
 

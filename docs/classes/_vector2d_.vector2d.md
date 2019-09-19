@@ -12,47 +12,47 @@ A 2-dimentional vector object
 
 ### Constructors
 
-* [constructor](vector2d.md#constructor)
+* [constructor](_vector2d_.vector2d.md#constructor)
 
 ### Properties
 
-* [x](vector2d.md#x)
-* [y](vector2d.md#y)
+* [x](_vector2d_.vector2d.md#x)
+* [y](_vector2d_.vector2d.md#y)
 
 ### Methods
 
-* [abs](vector2d.md#abs)
-* [add](vector2d.md#add)
-* [angleDeg](vector2d.md#angledeg)
-* [angleRad](vector2d.md#anglerad)
-* [clone](vector2d.md#clone)
-* [cross](vector2d.md#cross)
-* [distance](vector2d.md#distance)
-* [divideByScalar](vector2d.md#dividebyscalar)
-* [divideByVector](vector2d.md#dividebyvector)
-* [dot](vector2d.md#dot)
-* [equals](vector2d.md#equals)
-* [length](vector2d.md#length)
-* [lengthSq](vector2d.md#lengthsq)
-* [multiplyByScalar](vector2d.md#multiplybyscalar)
-* [multiplyByVector](vector2d.md#multiplybyvector)
-* [normalise](vector2d.md#normalise)
-* [reverse](vector2d.md#reverse)
-* [rotate](vector2d.md#rotate)
-* [rotateByOrigin](vector2d.md#rotatebyorigin)
-* [scale](vector2d.md#scale)
-* [subtract](vector2d.md#subtract)
-* [toArray](vector2d.md#toarray)
-* [toJSON](vector2d.md#tojson)
-* [toObject](vector2d.md#toobject)
-* [toString](vector2d.md#tostring)
-* [zero](vector2d.md#zero)
+* [abs](_vector2d_.vector2d.md#abs)
+* [add](_vector2d_.vector2d.md#add)
+* [angleDeg](_vector2d_.vector2d.md#angledeg)
+* [angleRad](_vector2d_.vector2d.md#anglerad)
+* [clone](_vector2d_.vector2d.md#clone)
+* [cross](_vector2d_.vector2d.md#cross)
+* [distance](_vector2d_.vector2d.md#distance)
+* [divideByScalar](_vector2d_.vector2d.md#dividebyscalar)
+* [divideByVector](_vector2d_.vector2d.md#dividebyvector)
+* [dot](_vector2d_.vector2d.md#dot)
+* [equals](_vector2d_.vector2d.md#equals)
+* [length](_vector2d_.vector2d.md#length)
+* [lengthSq](_vector2d_.vector2d.md#lengthsq)
+* [multiplyByScalar](_vector2d_.vector2d.md#multiplybyscalar)
+* [multiplyByVector](_vector2d_.vector2d.md#multiplybyvector)
+* [normalise](_vector2d_.vector2d.md#normalise)
+* [reverse](_vector2d_.vector2d.md#reverse)
+* [rotate](_vector2d_.vector2d.md#rotate)
+* [rotateByOrigin](_vector2d_.vector2d.md#rotatebyorigin)
+* [scale](_vector2d_.vector2d.md#scale)
+* [subtract](_vector2d_.vector2d.md#subtract)
+* [toArray](_vector2d_.vector2d.md#toarray)
+* [toJSON](_vector2d_.vector2d.md#tojson)
+* [toObject](_vector2d_.vector2d.md#toobject)
+* [toString](_vector2d_.vector2d.md#tostring)
+* [zero](_vector2d_.vector2d.md#zero)
 
 ## Constructors
 
 ###  constructor
 
-\+ **new Vector2d**(`x`: number, `y`: number): *[Vector2d](vector2d.md)*
+\+ **new Vector2d**(`x`: number, `y`: number): *[Vector2d](_vector2d_.vector2d.md)*
 
 Creates an instance of Vector2d.
 
@@ -63,7 +63,7 @@ Name | Type | Default | Description |
 `x` | number | 0 | - |
 `y` | number | 0 |   |
 
-**Returns:** *[Vector2d](vector2d.md)*
+**Returns:** *[Vector2d](_vector2d_.vector2d.md)*
 
 ## Properties
 
@@ -107,7 +107,7 @@ ___
 
 ###  angleDeg
 
-▸ **angleDeg**(`to`: [Vector2d](vector2d.md)): *number*
+▸ **angleDeg**(`to`: [Vector2d](_vector2d_.vector2d.md)): *number*
 
 Get angle between two vectors in degrees.
 
@@ -115,7 +115,7 @@ Get angle between two vectors in degrees.
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`to` | [Vector2d](vector2d.md) |   |
+`to` | [Vector2d](_vector2d_.vector2d.md) |   |
 
 **Returns:** *number*
 
@@ -123,7 +123,7 @@ ___
 
 ###  angleRad
 
-▸ **angleRad**(`to`: [Vector2d](vector2d.md)): *number*
+▸ **angleRad**(`to`: [Vector2d](_vector2d_.vector2d.md)): *number*
 
 Get angle between two vectors in radians.
 
@@ -131,7 +131,7 @@ Get angle between two vectors in radians.
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`to` | [Vector2d](vector2d.md) |   |
+`to` | [Vector2d](_vector2d_.vector2d.md) |   |
 
 **Returns:** *number*
 
@@ -139,11 +139,11 @@ ___
 
 ###  clone
 
-▸ **clone**(): *[Vector2d](vector2d.md)*
+▸ **clone**(): *[Vector2d](_vector2d_.vector2d.md)*
 
 Returns a copy of this vector
 
-**Returns:** *[Vector2d](vector2d.md)*
+**Returns:** *[Vector2d](_vector2d_.vector2d.md)*
 
 ___
 

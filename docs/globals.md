@@ -4,6 +4,7 @@
 
 ## Index
 
-### Classes
+### External modules
 
-* [Vector2d](classes/vector2d.md)
+* ["vector2d"](modules/_vector2d_.md)
+* ["vector2d.test"](modules/_vector2d_test_.md)
