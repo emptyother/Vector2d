@@ -15,6 +15,9 @@
 		"type": "git",
 		"url": "https://github.com/emptyother/Vector2d.git"
 	},
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com/@emptyother"
+	},
 	"keywords": [],
 	"author": "Tom A. Vibeto <tom@onlyhuman.dk> (https://onlyhuman.dk/)",
 	"license": "ISC",
