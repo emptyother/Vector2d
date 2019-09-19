@@ -17,7 +17,7 @@ const vec2 = new Vector2d(2,3);
 vec1.add(vec2);
 vec1.toString(); // (3, 4)
 vec1.toArray(); // [3, 4]
-vec1.toObject(); // { x: 0, y: 4 }
+vec1.toObject(); // { x: 3, y: 4 }
 ```
 
 ## Documentation
