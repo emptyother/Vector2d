@@ -28,9 +28,3 @@ vec1.toObject(); // { x: 3, y: 4 }
 [Documentation][docs]
 
 [docs]: /docs/classes/_vector2d_.vector2d.md
-
-## TODO
-
-- [ ] Finish writing tests.
-- [ ] Create a release, publish to GitHub Package Repository.
-- [ ] I had to restrict `typedoc-plugin-markdown` to `2.1.3` because newer versions fails to build. Look into why.
