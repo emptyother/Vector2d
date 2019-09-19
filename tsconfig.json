@@ -1,14 +1,28 @@
 {
 	"compilerOptions": {
-		"target": "es5",
-		"module": "commonjs",
+		"allowSyntheticDefaultImports": true,
 		"declaration": true,
-		"outDir": "./dist",
-		"strict": true,
-		"sourceMap": true,
 		"esModuleInterop": true,
-		"lib": ["es2015"]
+		"forceConsistentCasingInFileNames": true,
+		"incremental": true,
+		"keyofStringsOnly": true,
+		"lib": ["es2015"],
+		"module": "commonjs",
+		"noImplicitAny": true,
+		"noImplicitReturns": true,
+		"noImplicitThis": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"outDir": "./dist",
+		"removeComments": false,
+		"sourceMap": true,
+		"strict": true,
+		"strictBindCallApply": true,
+		"strictFunctionTypes": true,
+		"strictNullChecks": true,
+		"strictPropertyInitialization": true,
+		"target": "es5"
 	},
-	"include": ["src/**/*"],
-	"exclude": ["node_modules", "**/*.test.ts", "**/*.spec.ts"]
+	"exclude": ["node_modules"],
+	"include": ["src/**/*"]
 }

@@ -2,22 +2,30 @@
  * A 2-dimentional vector object
  */
 export default class Vector2d {
+	/**
+	 * Creates an instance of Vector2d.
+	 * @param x 
+	 * @param y 
+	 */
 	constructor(
 		public x: number = 0,
 		public y: number = 0
 	) { }
+
 	/**
 	* Return the vector as a formatted string, e.g "(0, 4)"
 	*/
 	public toString(): string {
 		return `(${this.x}, ${this.y})`;
 	}
+
 	/**
 	* Return an Array containing the vector axes, e.g [0, 4]
 	*/
 	public toArray(): [number, number] {
 		return [this.x, this.y];
 	}
+
 	/**
 	* Return an Object containing the vector axes, e.g { x: 0, y: 4 }
 	*/
@@ -27,15 +35,17 @@ export default class Vector2d {
 			y: this.y
 		};
 	}
+
 	/**
 	 * For JSON.stringify
 	 */
-	public toJSON(): any {
+	public toJSON(): { x: number; y: number } {
 		return {
 			x: this.x,
 			y: this.y
 		};
 	}
+
 	/**
 	* Add the provided vector to this one
 	*/
@@ -44,6 +54,7 @@ export default class Vector2d {
 		this.y += vec.y;
 		return this;
 	}
+
 	/**
 	 * Subtract the provided vector from this one
 	 */
@@ -52,12 +63,14 @@ export default class Vector2d {
 		this.y -= vec.y;
 		return this;
 	}
+
 	/**
 	 * Check if the provided vector equal to this one
 	 */
 	public equals(vec: this): boolean {
 		return vec.x === this.x && vec.y === this.y;
 	}
+
 	/**
 	 * Multiply this vector by the provided vector
 	 */
@@ -66,6 +79,7 @@ export default class Vector2d {
 		this.y *= vec.y;
 		return this;
 	}
+
 	/**
 	 * Divide this vector by the provided vector
 	 */
@@ -74,6 +88,7 @@ export default class Vector2d {
 		this.y /= vec.y;
 		return this;
 	}
+
 	/**
 	 * Multiply this vector by the provided number
 	 */
@@ -82,6 +97,7 @@ export default class Vector2d {
 		this.y *= n;
 		return this;
 	}
+
 	/**
 	 * Divive this vector by the provided number
 	 */
@@ -90,20 +106,23 @@ export default class Vector2d {
 		this.y /= n;
 		return this;
 	}
+
 	/**
 	 * Normalise this vector
 	 */
 	public normalise(): this {
 		return this.divideByScalar(this.length());
 	}
+
 	/**
 	 * Returns the magnitude (length) of this vector
 	 */
-	public length() {
+	public length(): number {
 		const x = this.x;
 		const y = this.y;
 		return Math.sqrt(x * x + y * y);
 	}
+
 	/**
 	 * Returns the squred length of this vector
 	 */
@@ -112,18 +131,21 @@ export default class Vector2d {
 		const y = this.y;
 		return x * x + y * y;
 	}
+
 	/**
 	 * Returns the dot product of this vector by another
 	 */
 	public dot(vec: this): number {
 		return vec.x * this.x + vec.y * this.y;
 	}
+
 	/**
 	 * Returns the cross product of this vector by another.
 	 */
 	public cross(vec: this): number {
 		return this.x * vec.y - this.y * vec.x;
 	}
+
 	/**
 	 * Reverses this vector i.e multiplies it by -1
 	 */
@@ -132,6 +154,7 @@ export default class Vector2d {
 		this.y = -this.y;
 		return this;
 	}
+
 	/**
 	 * Set the vector axes values to absolute values
 	 */
@@ -140,6 +163,7 @@ export default class Vector2d {
 		this.y = Math.abs(this.y);
 		return this;
 	}
+
 	/**
 	 * Zeroes the vector i.e sets all axes to 0
 	 */
@@ -147,6 +171,7 @@ export default class Vector2d {
 		this.x = this.y = 0;
 		return this;
 	}
+
 	/**
 	 * Returns the distance between this vector and another
 	 */
@@ -155,6 +180,7 @@ export default class Vector2d {
 		const y = this.y - v.y;
 		return Math.sqrt(x * x + y * y);
 	}
+
 	/**
 	 * Rotates the vetor by provided radians
 	 */
@@ -167,6 +193,7 @@ export default class Vector2d {
 		this.y = ox * sin + oy * cos;
 		return this;
 	}
+
 	/**
 	 * Rotate the vector by provided radians, around an origin.
 	 * @param rads
@@ -177,6 +204,7 @@ export default class Vector2d {
 			.rotate(rads)
 			.add(origin);
 	}
+
 	/**
 	 * Multiply the vector around an origin.
 	 * @param multipler
@@ -187,12 +215,14 @@ export default class Vector2d {
 			.multiplyByVector(multipler)
 			.add(origin);
 	}
+
 	/**
 	 * Returns a copy of this vector
 	 */
 	public clone(): Vector2d {
 		return new Vector2d(this.x, this.y);
 	}
+
 	/**
 	 * Get angle between two vectors in radians.
 	 * @param to
@@ -200,19 +230,20 @@ export default class Vector2d {
 	public angleRad(to: Vector2d): number {
 		return Math.atan2(to.y - this.y, to.x - this.x);
 	}
+
 	/**
 	 * Get angle between two vectors in degrees.
 	 * @param to
 	 */
 	public angleDeg(to: Vector2d): number {
-		return radianToDegrees(this.angleRad(to));
+		return this.radianToDegrees(this.angleRad(to));
 	}
-}
 
-/**
- * Convert radians to degrees.
- * @param radians
- */
-function radianToDegrees(radians: number): number {
-	return radians * 180 / Math.PI;
+	/**
+	 * Convert radians to degrees.
+	 * @param radians
+	 */
+	private radianToDegrees(radians: number): number {
+		return radians * 180 / Math.PI;
+	}
 }
