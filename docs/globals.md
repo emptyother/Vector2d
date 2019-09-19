@@ -1,4 +1,3 @@
-[Vector2d](README.md) › [Globals](globals.md)
 
 # Vector2d
 

@@ -1,4 +1,3 @@
-[Vector2d](../README.md) › [Globals](../globals.md) › [Vector2d](vector2d.md)
 
 # Class: Vector2d
 
@@ -55,8 +54,6 @@ A 2-dimentional vector object
 
 \+ **new Vector2d**(`x`: number, `y`: number): *[Vector2d](vector2d.md)*
 
-*Defined in [vector2d.ts:4](https://github.com/emptyother/Vector2d/blob/535b09a/src/vector2d.ts#L4)*
-
 Creates an instance of Vector2d.
 
 **Parameters:**
@@ -74,23 +71,17 @@ Name | Type | Default | Description |
 
 • **x**: *number*
 
-*Defined in [vector2d.ts:11](https://github.com/emptyother/Vector2d/blob/535b09a/src/vector2d.ts#L11)*
-
 ___
 
 ###  y
 
 • **y**: *number*
 
-*Defined in [vector2d.ts:12](https://github.com/emptyother/Vector2d/blob/535b09a/src/vector2d.ts#L12)*
-
 ## Methods
 
 ###  abs
 
 ▸ **abs**(): *this*
-
-*Defined in [vector2d.ts:161](https://github.com/emptyother/Vector2d/blob/535b09a/src/vector2d.ts#L161)*
 
 Set the vector axes values to absolute values
 
@@ -101,8 +92,6 @@ ___
 ###  add
 
 ▸ **add**(`vec`: this): *this*
-
-*Defined in [vector2d.ts:52](https://github.com/emptyother/Vector2d/blob/535b09a/src/vector2d.ts#L52)*
 
 Add the provided vector to this one
 
@@ -120,8 +109,6 @@ ___
 
 ▸ **angleDeg**(`to`: [Vector2d](vector2d.md)): *number*
 
-*Defined in [vector2d.ts:238](https://github.com/emptyother/Vector2d/blob/535b09a/src/vector2d.ts#L238)*
-
 Get angle between two vectors in degrees.
 
 **Parameters:**
@@ -137,8 +124,6 @@ ___
 ###  angleRad
 
 ▸ **angleRad**(`to`: [Vector2d](vector2d.md)): *number*
-
-*Defined in [vector2d.ts:230](https://github.com/emptyother/Vector2d/blob/535b09a/src/vector2d.ts#L230)*
 
 Get angle between two vectors in radians.
 
@@ -156,8 +141,6 @@ ___
 
 ▸ **clone**(): *[Vector2d](vector2d.md)*
 
-*Defined in [vector2d.ts:222](https://github.com/emptyother/Vector2d/blob/535b09a/src/vector2d.ts#L222)*
-
 Returns a copy of this vector
 
 **Returns:** *[Vector2d](vector2d.md)*
@@ -167,8 +150,6 @@ ___
 ###  cross
 
 ▸ **cross**(`vec`: this): *number*
-
-*Defined in [vector2d.ts:145](https://github.com/emptyother/Vector2d/blob/535b09a/src/vector2d.ts#L145)*
 
 Returns the cross product of this vector by another.
 
@@ -186,8 +167,6 @@ ___
 
 ▸ **distance**(`v`: this): *number*
 
-*Defined in [vector2d.ts:178](https://github.com/emptyother/Vector2d/blob/535b09a/src/vector2d.ts#L178)*
-
 Returns the distance between this vector and another
 
 **Parameters:**
@@ -203,8 +182,6 @@ ___
 ###  divideByScalar
 
 ▸ **divideByScalar**(`n`: number): *this*
-
-*Defined in [vector2d.ts:104](https://github.com/emptyother/Vector2d/blob/535b09a/src/vector2d.ts#L104)*
 
 Divive this vector by the provided number
 
@@ -222,8 +199,6 @@ ___
 
 ▸ **divideByVector**(`vec`: this): *this*
 
-*Defined in [vector2d.ts:86](https://github.com/emptyother/Vector2d/blob/535b09a/src/vector2d.ts#L86)*
-
 Divide this vector by the provided vector
 
 **Parameters:**
@@ -239,8 +214,6 @@ ___
 ###  dot
 
 ▸ **dot**(`vec`: this): *number*
-
-*Defined in [vector2d.ts:138](https://github.com/emptyother/Vector2d/blob/535b09a/src/vector2d.ts#L138)*
 
 Returns the dot product of this vector by another
 
@@ -258,8 +231,6 @@ ___
 
 ▸ **equals**(`vec`: this): *boolean*
 
-*Defined in [vector2d.ts:70](https://github.com/emptyother/Vector2d/blob/535b09a/src/vector2d.ts#L70)*
-
 Check if the provided vector equal to this one
 
 **Parameters:**
@@ -276,8 +247,6 @@ ___
 
 ▸ **length**(): *number*
 
-*Defined in [vector2d.ts:120](https://github.com/emptyother/Vector2d/blob/535b09a/src/vector2d.ts#L120)*
-
 Returns the magnitude (length) of this vector
 
 **Returns:** *number*
@@ -288,8 +257,6 @@ ___
 
 ▸ **lengthSq**(): *number*
 
-*Defined in [vector2d.ts:129](https://github.com/emptyother/Vector2d/blob/535b09a/src/vector2d.ts#L129)*
-
 Returns the squred length of this vector
 
 **Returns:** *number*
@@ -299,8 +266,6 @@ ___
 ###  multiplyByScalar
 
 ▸ **multiplyByScalar**(`n`: number): *this*
-
-*Defined in [vector2d.ts:95](https://github.com/emptyother/Vector2d/blob/535b09a/src/vector2d.ts#L95)*
 
 Multiply this vector by the provided number
 
@@ -318,8 +283,6 @@ ___
 
 ▸ **multiplyByVector**(`vec`: this): *this*
 
-*Defined in [vector2d.ts:77](https://github.com/emptyother/Vector2d/blob/535b09a/src/vector2d.ts#L77)*
-
 Multiply this vector by the provided vector
 
 **Parameters:**
@@ -336,8 +299,6 @@ ___
 
 ▸ **normalise**(): *this*
 
-*Defined in [vector2d.ts:113](https://github.com/emptyother/Vector2d/blob/535b09a/src/vector2d.ts#L113)*
-
 Normalise this vector
 
 **Returns:** *this*
@@ -348,8 +309,6 @@ ___
 
 ▸ **reverse**(): *this*
 
-*Defined in [vector2d.ts:152](https://github.com/emptyother/Vector2d/blob/535b09a/src/vector2d.ts#L152)*
-
 Reverses this vector i.e multiplies it by -1
 
 **Returns:** *this*
@@ -359,8 +318,6 @@ ___
 ###  rotate
 
 ▸ **rotate**(`rads`: number): *this*
-
-*Defined in [vector2d.ts:187](https://github.com/emptyother/Vector2d/blob/535b09a/src/vector2d.ts#L187)*
 
 Rotates the vetor by provided radians
 
@@ -377,8 +334,6 @@ ___
 ###  rotateByOrigin
 
 ▸ **rotateByOrigin**(`rads`: number, `origin`: this): *this*
-
-*Defined in [vector2d.ts:202](https://github.com/emptyother/Vector2d/blob/535b09a/src/vector2d.ts#L202)*
 
 Rotate the vector by provided radians, around an origin.
 
@@ -397,8 +352,6 @@ ___
 
 ▸ **scale**(`multipler`: this, `origin`: this): *this*
 
-*Defined in [vector2d.ts:213](https://github.com/emptyother/Vector2d/blob/535b09a/src/vector2d.ts#L213)*
-
 Multiply the vector around an origin.
 
 **Parameters:**
@@ -416,8 +369,6 @@ ___
 
 ▸ **subtract**(`vec`: this): *this*
 
-*Defined in [vector2d.ts:61](https://github.com/emptyother/Vector2d/blob/535b09a/src/vector2d.ts#L61)*
-
 Subtract the provided vector from this one
 
 **Parameters:**
@@ -434,8 +385,6 @@ ___
 
 ▸ **toArray**(): *[number, number]*
 
-*Defined in [vector2d.ts:25](https://github.com/emptyother/Vector2d/blob/535b09a/src/vector2d.ts#L25)*
-
 Return an Array containing the vector axes, e.g [0, 4]
 
 **Returns:** *[number, number]*
@@ -445,8 +394,6 @@ ___
 ###  toJSON
 
 ▸ **toJSON**(): *object*
-
-*Defined in [vector2d.ts:42](https://github.com/emptyother/Vector2d/blob/535b09a/src/vector2d.ts#L42)*
 
 For JSON.stringify
 
@@ -458,8 +405,6 @@ ___
 
 ▸ **toObject**(): *object*
 
-*Defined in [vector2d.ts:32](https://github.com/emptyother/Vector2d/blob/535b09a/src/vector2d.ts#L32)*
-
 Return an Object containing the vector axes, e.g { x: 0, y: 4 }
 
 **Returns:** *object*
@@ -470,8 +415,6 @@ ___
 
 ▸ **toString**(): *string*
 
-*Defined in [vector2d.ts:18](https://github.com/emptyother/Vector2d/blob/535b09a/src/vector2d.ts#L18)*
-
 Return the vector as a formatted string, e.g "(0, 4)"
 
 **Returns:** *string*
@@ -481,8 +424,6 @@ ___
 ###  zero
 
 ▸ **zero**(): *this*
-
-*Defined in [vector2d.ts:170](https://github.com/emptyother/Vector2d/blob/535b09a/src/vector2d.ts#L170)*
 
 Zeroes the vector i.e sets all axes to 0
 

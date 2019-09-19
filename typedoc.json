@@ -10,5 +10,9 @@
 	"excludeNotExported": true,
 	"excludePrivate": true,
 	"excludeProtected": true,
-	"theme": "markdown"
+	"theme": "markdown",
+	"hideProjectTitle": true,
+	"hideBreadcrumbs": true,
+	"hideIndexes": false,
+	"hideSources": true
 }
