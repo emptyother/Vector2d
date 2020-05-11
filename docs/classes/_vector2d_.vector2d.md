@@ -46,6 +46,7 @@ A 2-dimentional vector object
 * [toObject](_vector2d_.vector2d.md#toobject)
 * [toString](_vector2d_.vector2d.md#tostring)
 * [zero](_vector2d_.vector2d.md#zero)
+* [radianToDegrees](_vector2d_.vector2d.md#static-radiantodegrees)
 
 ## Constructors
 
@@ -82,7 +83,7 @@ ___
 
 ▸ **abs**(): *this*
 
-Set the vector axes values to absolute values
+Set the vector axes values to absolute values.
 
 **Returns:** *this*
 
@@ -90,15 +91,15 @@ ___
 
 ###  add
 
-▸ **add**(`vec`: this): *this*
+▸ **add**(`vec`: XY): *this*
 
-Add the provided vector to this one
+Add the provided vector to this one.
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`vec` | this |
+`vec` | XY |
 
 **Returns:** *this*
 
@@ -106,15 +107,15 @@ ___
 
 ###  angleDeg
 
-▸ **angleDeg**(`to`: [Vector2d](_vector2d_.vector2d.md)): *number*
+▸ **angleDeg**(`to`: XY): *number*
 
-Get angle between two vectors in degrees.
+Get the smallest angle between two vectors in degrees.
 
 **Parameters:**
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`to` | [Vector2d](_vector2d_.vector2d.md) |   |
+`to` | XY |   |
 
 **Returns:** *number*
 
@@ -122,15 +123,15 @@ ___
 
 ###  angleRad
 
-▸ **angleRad**(`to`: [Vector2d](_vector2d_.vector2d.md)): *number*
+▸ **angleRad**(`to`: XY): *number*
 
-Get angle between two vectors in radians.
+Get smallest angle between two vectors in radians.
 
 **Parameters:**
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`to` | [Vector2d](_vector2d_.vector2d.md) |   |
+`to` | XY |   |
 
 **Returns:** *number*
 
@@ -148,7 +149,7 @@ ___
 
 ###  cross
 
-▸ **cross**(`vec`: this): *number*
+▸ **cross**(`vec`: XY): *number*
 
 Returns the cross product of this vector by another.
 
@@ -156,7 +157,7 @@ Returns the cross product of this vector by another.
 
 Name | Type |
 ------ | ------ |
-`vec` | this |
+`vec` | XY |
 
 **Returns:** *number*
 
@@ -164,7 +165,7 @@ ___
 
 ###  distance
 
-▸ **distance**(`v`: this): *number*
+▸ **distance**(`vec`: XY): *number*
 
 Returns the distance between this vector and another
 
@@ -172,7 +173,7 @@ Returns the distance between this vector and another
 
 Name | Type |
 ------ | ------ |
-`v` | this |
+`vec` | XY |
 
 **Returns:** *number*
 
@@ -182,7 +183,7 @@ ___
 
 ▸ **divideByScalar**(`n`: number): *this*
 
-Divive this vector by the provided number
+Divive this vector by the provided number.
 
 **Parameters:**
 
@@ -196,15 +197,15 @@ ___
 
 ###  divideByVector
 
-▸ **divideByVector**(`vec`: this): *this*
+▸ **divideByVector**(`vec`: XY): *this*
 
-Divide this vector by the provided vector
+Divide this vector by the provided vector.
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`vec` | this |
+`vec` | XY |
 
 **Returns:** *this*
 
@@ -212,15 +213,15 @@ ___
 
 ###  dot
 
-▸ **dot**(`vec`: this): *number*
+▸ **dot**(`vec`: XY): *number*
 
-Returns the dot product of this vector by another
+Returns the dot product of this vector by another vector.
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`vec` | this |
+`vec` | XY |
 
 **Returns:** *number*
 
@@ -228,15 +229,15 @@ ___
 
 ###  equals
 
-▸ **equals**(`vec`: this): *boolean*
+▸ **equals**(`vec`: XY): *boolean*
 
-Check if the provided vector equal to this one
+Check if the provided vector equal to this one.
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`vec` | this |
+`vec` | XY |
 
 **Returns:** *boolean*
 
@@ -246,7 +247,7 @@ ___
 
 ▸ **length**(): *number*
 
-Returns the magnitude (length) of this vector
+Returns the magnitude (length) of this vector.
 
 **Returns:** *number*
 
@@ -256,7 +257,7 @@ ___
 
 ▸ **lengthSq**(): *number*
 
-Returns the squred length of this vector
+Returns the squred length of this vector.
 
 **Returns:** *number*
 
@@ -266,7 +267,7 @@ ___
 
 ▸ **multiplyByScalar**(`n`: number): *this*
 
-Multiply this vector by the provided number
+Multiply this vector by the provided number.
 
 **Parameters:**
 
@@ -280,15 +281,15 @@ ___
 
 ###  multiplyByVector
 
-▸ **multiplyByVector**(`vec`: this): *this*
+▸ **multiplyByVector**(`vec`: XY): *this*
 
-Multiply this vector by the provided vector
+Multiply this vector by the provided vector.
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`vec` | this |
+`vec` | XY |
 
 **Returns:** *this*
 
@@ -298,7 +299,7 @@ ___
 
 ▸ **normalise**(): *this*
 
-Normalise this vector
+Normalise this vector (set its length to 1).
 
 **Returns:** *this*
 
@@ -308,7 +309,7 @@ ___
 
 ▸ **reverse**(): *this*
 
-Reverses this vector i.e multiplies it by -1
+Reverse this vector.
 
 **Returns:** *this*
 
@@ -332,7 +333,7 @@ ___
 
 ###  rotateByOrigin
 
-▸ **rotateByOrigin**(`rads`: number, `origin`: this): *this*
+▸ **rotateByOrigin**(`rads`: number, `origin`: XY): *this*
 
 Rotate the vector by provided radians, around an origin.
 
@@ -341,7 +342,7 @@ Rotate the vector by provided radians, around an origin.
 Name | Type | Description |
 ------ | ------ | ------ |
 `rads` | number | - |
-`origin` | this |   |
+`origin` | XY |   |
 
 **Returns:** *this*
 
@@ -349,7 +350,7 @@ ___
 
 ###  scale
 
-▸ **scale**(`multipler`: this, `origin`: this): *this*
+▸ **scale**(`multipler`: XY, `origin`: XY): *this*
 
 Multiply the vector around an origin.
 
@@ -357,8 +358,8 @@ Multiply the vector around an origin.
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`multipler` | this | - |
-`origin` | this |   |
+`multipler` | XY | - |
+`origin` | XY |   |
 
 **Returns:** *this*
 
@@ -366,15 +367,15 @@ ___
 
 ###  subtract
 
-▸ **subtract**(`vec`: this): *this*
+▸ **subtract**(`vec`: XY): *this*
 
-Subtract the provided vector from this one
+Subtract the provided vector from this one.
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`vec` | this |
+`vec` | XY |
 
 **Returns:** *this*
 
@@ -384,7 +385,9 @@ ___
 
 ▸ **toArray**(): *[number, number]*
 
-Return an Array containing the vector axes, e.g [0, 4]
+Return an Array containing the vector axes.
+
+**`example`** [0, 4]
 
 **Returns:** *[number, number]*
 
@@ -392,21 +395,23 @@ ___
 
 ###  toJSON
 
-▸ **toJSON**(): *object*
+▸ **toJSON**(): *XY*
 
-For JSON.stringify
+For `JSON.stringify()`.
 
-**Returns:** *object*
+**Returns:** *XY*
 
 ___
 
 ###  toObject
 
-▸ **toObject**(): *object*
+▸ **toObject**(): *XY*
 
-Return an Object containing the vector axes, e.g { x: 0, y: 4 }
+Return an Object containing the vector axes.
 
-**Returns:** *object*
+**`example`** { x: 0, y: 4 }.
+
+**Returns:** *XY*
 
 ___
 
@@ -414,7 +419,9 @@ ___
 
 ▸ **toString**(): *string*
 
-Return the vector as a formatted string, e.g "(0, 4)"
+Return the vector as a formatted string.
+
+**`example`** "(0, 4)"
 
 **Returns:** *string*
 
@@ -424,6 +431,22 @@ ___
 
 ▸ **zero**(): *this*
 
-Zeroes the vector i.e sets all axes to 0
+Zeroes the vector i.e sets all axes to 0.
 
 **Returns:** *this*
+
+___
+
+### `Static` radianToDegrees
+
+▸ **radianToDegrees**(`radians`: number): *number*
+
+Convert radians to degrees.
+
+**Parameters:**
+
+Name | Type | Description |
+------ | ------ | ------ |
+`radians` | number |   |
+
+**Returns:** *number*

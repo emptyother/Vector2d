@@ -13,23 +13,26 @@ export default class Vector2d {
 	) { }
 
 	/**
-	* Return the vector as a formatted string, e.g "(0, 4)"
+	* Return the vector as a formatted string. 
+	* @example "(0, 4)"
 	*/
 	public toString(): string {
 		return `(${this.x}, ${this.y})`;
 	}
 
 	/**
-	* Return an Array containing the vector axes, e.g [0, 4]
+	* Return an Array containing the vector axes. 
+	* @example [0, 4]
 	*/
 	public toArray(): [number, number] {
 		return [this.x, this.y];
 	}
 
 	/**
-	* Return an Object containing the vector axes, e.g { x: 0, y: 4 }
+	* Return an Object containing the vector axes. 
+	* @example { x: 0, y: 4 }.
 	*/
-	public toObject(): { x: number; y: number } {
+	public toObject(): XY {
 		return {
 			x: this.x,
 			y: this.y
@@ -37,9 +40,9 @@ export default class Vector2d {
 	}
 
 	/**
-	 * For JSON.stringify
+	 * For `JSON.stringify()`.
 	 */
-	public toJSON(): { x: number; y: number } {
+	public toJSON(): XY {
 		return {
 			x: this.x,
 			y: this.y
@@ -47,50 +50,50 @@ export default class Vector2d {
 	}
 
 	/**
-	* Add the provided vector to this one
+	* Add the provided vector to this one.
 	*/
-	public add(vec: this): this {
+	public add(vec: XY): this {
 		this.x += vec.x;
 		this.y += vec.y;
 		return this;
 	}
 
 	/**
-	 * Subtract the provided vector from this one
+	 * Subtract the provided vector from this one.
 	 */
-	public subtract(vec: this): this {
+	public subtract(vec: XY): this {
 		this.x -= vec.x;
 		this.y -= vec.y;
 		return this;
 	}
 
 	/**
-	 * Check if the provided vector equal to this one
+	 * Check if the provided vector equal to this one.
 	 */
-	public equals(vec: this): boolean {
+	public equals(vec: XY): boolean {
 		return vec.x === this.x && vec.y === this.y;
 	}
 
 	/**
-	 * Multiply this vector by the provided vector
+	 * Multiply this vector by the provided vector.
 	 */
-	public multiplyByVector(vec: this): this {
+	public multiplyByVector(vec: XY): this {
 		this.x *= vec.x;
 		this.y *= vec.y;
 		return this;
 	}
 
 	/**
-	 * Divide this vector by the provided vector
+	 * Divide this vector by the provided vector.
 	 */
-	public divideByVector(vec: this): this {
+	public divideByVector(vec: XY): this {
 		this.x /= vec.x;
 		this.y /= vec.y;
 		return this;
 	}
 
 	/**
-	 * Multiply this vector by the provided number
+	 * Multiply this vector by the provided number.
 	 */
 	public multiplyByScalar(n: number): this {
 		this.x *= n;
@@ -99,7 +102,7 @@ export default class Vector2d {
 	}
 
 	/**
-	 * Divive this vector by the provided number
+	 * Divive this vector by the provided number.
 	 */
 	public divideByScalar(n: number): this {
 		this.x /= n;
@@ -108,46 +111,42 @@ export default class Vector2d {
 	}
 
 	/**
-	 * Normalise this vector
+	 * Normalise this vector (set its length to 1).
 	 */
 	public normalise(): this {
 		return this.divideByScalar(this.length());
 	}
 
 	/**
-	 * Returns the magnitude (length) of this vector
+	 * Returns the magnitude (length) of this vector.
 	 */
 	public length(): number {
-		const x = this.x;
-		const y = this.y;
-		return Math.sqrt(x * x + y * y);
+		return Math.sqrt(this.lengthSq());
 	}
 
 	/**
-	 * Returns the squred length of this vector
+	 * Returns the squred length of this vector.
 	 */
 	public lengthSq(): number {
-		const x = this.x;
-		const y = this.y;
-		return x * x + y * y;
+		return this.clone().dot(this);
 	}
 
 	/**
-	 * Returns the dot product of this vector by another
+	 * Returns the dot product of this vector by another vector.
 	 */
-	public dot(vec: this): number {
+	public dot(vec: XY): number {
 		return vec.x * this.x + vec.y * this.y;
 	}
 
 	/**
 	 * Returns the cross product of this vector by another.
 	 */
-	public cross(vec: this): number {
+	public cross(vec: XY): number {
 		return this.x * vec.y - this.y * vec.x;
 	}
 
 	/**
-	 * Reverses this vector i.e multiplies it by -1
+	 * Reverse this vector.
 	 */
 	public reverse(): this {
 		this.x = -this.x;
@@ -156,7 +155,7 @@ export default class Vector2d {
 	}
 
 	/**
-	 * Set the vector axes values to absolute values
+	 * Set the vector axes values to absolute values.
 	 */
 	public abs(): this {
 		this.x = Math.abs(this.x);
@@ -165,7 +164,7 @@ export default class Vector2d {
 	}
 
 	/**
-	 * Zeroes the vector i.e sets all axes to 0
+	 * Zeroes the vector i.e sets all axes to 0.
 	 */
 	public zero(): this {
 		this.x = this.y = 0;
@@ -175,10 +174,9 @@ export default class Vector2d {
 	/**
 	 * Returns the distance between this vector and another
 	 */
-	public distance(v: this): number {
-		const x = this.x - v.x;
-		const y = this.y - v.y;
-		return Math.sqrt(x * x + y * y);
+	public distance(vec: XY): number {
+		const va = this.clone().subtract(vec);
+		return Math.sqrt(va.dot(va));
 	}
 
 	/**
@@ -199,7 +197,7 @@ export default class Vector2d {
 	 * @param rads
 	 * @param origin
 	 */
-	public rotateByOrigin(rads: number, origin: this): this {
+	public rotateByOrigin(rads: number, origin: XY): this {
 		return this.subtract(origin)
 			.rotate(rads)
 			.add(origin);
@@ -210,7 +208,7 @@ export default class Vector2d {
 	 * @param multipler
 	 * @param origin
 	 */
-	public scale(multipler: this, origin: this): this {
+	public scale(multipler: XY, origin: XY): this {
 		return this.subtract(origin)
 			.multiplyByVector(multipler)
 			.add(origin);
@@ -224,26 +222,33 @@ export default class Vector2d {
 	}
 
 	/**
-	 * Get angle between two vectors in radians.
+	 * Get smallest angle between two vectors in radians.
 	 * @param to
 	 */
-	public angleRad(to: Vector2d): number {
-		return Math.atan2(to.y - this.y, to.x - this.x);
+	public angleRad(to: XY): number {
+		const cross = this.clone().cross(to);
+		const dot = this.clone().dot(to);
+		return Math.atan2(cross, dot);
 	}
 
 	/**
-	 * Get angle between two vectors in degrees.
+	 * Get the smallest angle between two vectors in degrees.
 	 * @param to
 	 */
-	public angleDeg(to: Vector2d): number {
-		return this.radianToDegrees(this.angleRad(to));
+	public angleDeg(to: XY): number {
+		return Vector2d.radianToDegrees(this.angleRad(to));
 	}
 
 	/**
 	 * Convert radians to degrees.
 	 * @param radians
 	 */
-	private radianToDegrees(radians: number): number {
+	public static radianToDegrees(radians: number): number {
 		return radians * 180 / Math.PI;
 	}
+}
+
+interface XY {
+	x: number;
+	y: number
 }
