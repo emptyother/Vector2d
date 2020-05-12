@@ -1,5 +1,5 @@
 
-# External module: "vector2d"
+# Module: "vector2d"
 
 ## Index
 

@@ -1,5 +1,4 @@
 {
-	"$schema": "http://json.schemastore.org/typedoc",
 	"out": "docs/",
 	"mode": "modules",
 	"includes": "src/",
@@ -14,5 +13,7 @@
 	"hideBreadcrumbs": true,
 	"hideIndexes": false,
 	"hideSources": true,
-	"src": "src/vector2d.ts"
+	"inputFiles": [
+		"src/vector2d.ts"
+	]
 }

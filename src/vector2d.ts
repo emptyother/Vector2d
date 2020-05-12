@@ -250,5 +250,5 @@ export default class Vector2d {
 
 interface XY {
 	x: number;
-	y: number
+	y: number;
 }
