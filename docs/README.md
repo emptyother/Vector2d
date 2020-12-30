@@ -13,7 +13,7 @@ npm install @emptyother/vector2d
 ```
 
 ```typescript
-import Vector2d from 'vector2d';
+import Vector2d from '@emptyother/vector2d';
 
 const vec1 = new Vector2d(1,1);
 const vec2 = new Vector2d(2,3);
